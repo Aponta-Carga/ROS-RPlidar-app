@@ -22,8 +22,8 @@ const styles = {
 
 function ResponsiveAppBar() {
   return (
-    <AppBar style={styles.navbar} position="static">
-      <Container maxWidth="xl">
+    <AppBar style={styles.navbar} position="static" >
+      <Container maxWidth="xl" sx={{marginLeft: '2.5rem'}}>
         <Toolbar disableGutters>
           <Box
             style={styles.logo}

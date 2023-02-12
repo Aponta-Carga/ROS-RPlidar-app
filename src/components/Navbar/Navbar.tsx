@@ -10,8 +10,13 @@ const styles = {
   navbar: {
     background: "#538E3F"
   },
-  paperContainer: {
-    backgroundImage: `url(${Image})`
+  logo: {
+    backgroundImage: `url(${Image})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
+    backgroundPosition: 'left',
+    minWidth: '100%',
+    minHeight: '50px'
   }
 };
 
@@ -21,11 +26,8 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
-            sx={{
-              width: 100,
-              backgroundImage: "url('https://via.placeholder.com/500')"
-            }}
-          />  
+            style={styles.logo}
+          ></Box>
         </Toolbar>
       </Container>
     </AppBar>

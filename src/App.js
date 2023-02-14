@@ -3,7 +3,8 @@ import Navbar from './components/Navbar/Navbar.tsx';
 
 const styles = {
   body: {
-    background: "#192C33"
+    background: "#192C33",
+    height: "100vh"
   },
 }
 

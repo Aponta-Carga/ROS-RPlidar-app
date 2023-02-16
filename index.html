@@ -37,7 +37,7 @@
 
             <div class="card" style="width: 100%; min-height: 200px">
               <nav class="navbar bg-dark">
-                <h3 class="main-card-title">/point_cloud_saver_controller</h3>
+                <h3 class="main-card-title">/point_cloud_controller</h3>
               </nav>
               <div class="card-body">
                 <div class="status-container">
@@ -50,10 +50,12 @@
                     </svg>
                   </div>
                 </div>
-
+                <div>
+                  <p id="cloud_saver_status">Os dados NÃO estão sendo salvos</p>
+                </div>
                 <div style="margin-top: 2rem; text-align: center;">
-                  <button onclick="sendMessage()" type="button" class="btn btn-primary" id="point-cloud-saver-activate">Ativar</button>
-                  <button type="button" class="btn btn-secondary" id="point-cloud-saver-deactivate">Desativar</button>
+                  <button onclick="sendActionToPointCloudController(1.0)" type="button" class="btn btn-primary" id="point-cloud-saver-activate">Ativar</button>
+                  <button onclick="sendActionToPointCloudController(0.0)" type="button" class="btn btn-secondary" id="point-cloud-saver-deactivate">Desativar</button>
                 </div>
 
               </div>
@@ -85,5 +87,6 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
     <!-- Our own JS -->
     <script src="/index.js" crossorigin="anonymous"></script>
+    <script src="/scripts/point_cloud_saver.js" crossorigin="anonymous"></script>
   </body>
 </html>

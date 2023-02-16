@@ -1,11 +1,7 @@
 $(document).ready(function(){
   console.log("Document ready!!!");
 
-
-});
-
-function sendMessage() {
-  var ros = new ROSLIB.Ros({
+  ros = new ROSLIB.Ros({
     url: 'ws://localhost:9090'
   });
   
@@ -20,6 +16,13 @@ function sendMessage() {
   ros.on('close', function() {
     console.log('Disconnected from ROS Bridge server.');
   });
+
+});
+
+// Variáveis globais
+var ros;
+
+function sendMessage() {
   
   console.log("Connection established!!");
 

@@ -36,13 +36,13 @@ function sendMessage() {
   topic.publish(message);
 }
 
-  var listener = new ROSLIB.Topic({
-    ros : ros,
-    name : '/listener',
-    messageType : 'std_msgs/String'
-  });
+// var listener = new ROSLIB.Topic({
+//   ros : ros,
+//   name : '/listener',
+//   messageType : 'std_msgs/String'
+// });
 
-  listener.subscribe(function(message) {
-    console.log('Received message on ' + listener.name + ': ' + message.data);
-    listener.unsubscribe();
-  });
+// listener.subscribe(function(message) {
+//   console.log('Received message on ' + listener.name + ': ' + message.data);
+//   listener.unsubscribe();
+// });

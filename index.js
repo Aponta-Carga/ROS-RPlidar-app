@@ -17,10 +17,15 @@ $(document).ready(function(){
     console.log('Disconnected from ROS Bridge server.');
   });
 
+  initializeTopics();
+  displayCurrentSpeed();
+
 });
 
 // Variáveis globais
 var ros;
+var speed_controller;
+var point_cloud_controller;
 
 function sendMessage() {
   
@@ -30,22 +35,21 @@ function sendMessage() {
     data: 1.0
   });
   
-  var topic = new ROSLIB.Topic({
+  point_cloud_controller.publish(message);
+}
+
+function initializeTopics() {
+
+  point_cloud_controller = new ROSLIB.Topic({
     ros: ros,
     name: '/point_cloud_controller',
     messageType: 'std_msgs/Float32'
   });
-  
-  topic.publish(message);
+
+  speed_controller = new ROSLIB.Topic({
+    ros: ros,
+    name: "/speed_controller",
+    messageType: 'std_msgs/Float32'
+  });
+
 }
-
-// var listener = new ROSLIB.Topic({
-//   ros : ros,
-//   name : '/listener',
-//   messageType : 'std_msgs/String'
-// });
-
-// listener.subscribe(function(message) {
-//   console.log('Received message on ' + listener.name + ': ' + message.data);
-//   listener.unsubscribe();
-// });

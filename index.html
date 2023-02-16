@@ -78,7 +78,15 @@
               <h3 class="main-card-title">/speed_controller</h3>
             </nav>
             <div class="card-body">
-              <p class="card-text">Aqui apresentaremos a imagem que está aparecendo no Rviz</p>
+              <p id="current-speed" class="card-text" style="text-align: center;">Velocidade atual: -- m/s</p>
+              
+              <div class="input-group mb-3">
+                <input id="input-speed-field" type="text" class="form-control" placeholder="Velocidade em m/s" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button id="submit-speed-button" class="btn btn-primary" type="button">Confirmar</button>
+                </div>
+              </div>
+              
             </div>
           </div>
 

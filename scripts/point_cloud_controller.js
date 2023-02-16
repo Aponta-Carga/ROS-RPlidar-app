@@ -8,7 +8,7 @@ Nesse sentido, ao clicar no botão "Ativar", o usuário está setando a flag par
 Uma indicação visual de que os dados estão sendo salvos também será apresentada.
 */
 
-$("#point-cloud-controller-activate").click(function(){
+$("#point-cloud-controller-activate").click(function() {
   $("#cloud-saver-status-primary-text").text("Status: Online");
   $("#cloud-saver-status-primary-text").css("color", "blue");
   $("#point-cloud-icon-inactive").css("display", "none");

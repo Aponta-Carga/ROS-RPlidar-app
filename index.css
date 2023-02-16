@@ -33,3 +33,15 @@ body {
 .status-container {
   display: flex;
 }
+
+.icon-connection-active {
+  fill: blue;
+}
+
+.icon-connection-inactive {
+  fill: red;
+}
+
+.row {
+  margin-top: 1rem;
+}

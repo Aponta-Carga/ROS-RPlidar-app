@@ -1,0 +1,35 @@
+body {
+  background-color: #192C33;
+}
+
+.logo-container {
+  margin-left: 2rem;
+  min-height: 50px;
+  min-width: 30vw;
+  background-image: url("icons/ROS_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-dark {
+  min-height: 35px;
+  background-color: #538E3F !important;
+}
+
+.container {
+  margin-top: 4rem;
+}
+
+.card{
+  background-color: #88B45B;
+  border-radius: 1px;
+}
+
+.main-card-title {
+  color: white;
+  margin: auto;
+}
+
+.status-container {
+  display: flex;
+}

@@ -38,3 +38,5 @@ function submitSpeedToTopic() {
   $("#input-speed-field").val("");
 
 }
+
+setInterval(displayCurrentSpeed, 150);

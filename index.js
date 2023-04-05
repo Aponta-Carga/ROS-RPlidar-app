@@ -2,7 +2,7 @@ $(document).ready(function(){
   console.log("Document ready!!!");
 
   ros = new ROSLIB.Ros({
-    url: 'ws://localhost:9090'
+    url: 'ws://' + window.location.hostname +  ':9090'
   });
   
   ros.on('connection', function() {
